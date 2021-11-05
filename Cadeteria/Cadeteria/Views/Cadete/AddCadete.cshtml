@@ -1,0 +1,66 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    List<Cadete> cadetes = TempData["cadetes"] as List<Cadete>;
+}
+
+@model Cadeteria.Models.Cadete
+
+<form asp-action="AddCadete" asp-controller="Cadete" method="post">
+    <fieldset>
+        <legend>Cadetes</legend>
+        <div>
+            <label for="lastname">Apellido:<input type="text" id="lastname" asp-for="Apellido" /></label>
+            <span asp-validation-for="Apellido" class="text-danger"></span>
+        </div>
+        <div>
+            <label for="name">Nombre:<input type="text" id="name" asp-for="Nombre" /></label>
+            <span asp-validation-for="Nombre" class="text-danger"></span>
+        </div>
+        <div>
+            <label for="dire">Domicilio:<input type="text" id="dire" asp-for="Domicilio" /></label>
+            <span asp-validation-for="Domicilio" class="text-danger"></span>
+        </div>
+        <div>
+            <label for="tel">Telefono:<input type="text" id="tel" asp-for="Telefono" /></label>
+            <span asp-validation-for="Telefono" class="text-danger"></span>
+        </div>
+    </fieldset>
+    <button type="submit">Enviar</button>
+</form>
+
+<div>
+    @if (cadetes != null && cadetes.Count > 0)
+    {
+        <form asp-action="buscarCadete" asp-controller="Cadete" method="post">
+            <label>Buscar: <input type="text" name="apellido"/></label>
+            <button type="submit">Buscar</button>
+        </form>
+
+
+        <table class="table table-striped table-dark">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Apellido</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Domicilio</th>
+                    <th scope="col">Telefono</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in cadetes)
+                {
+                    <tr>
+                        <th>@item.Id</th>
+                        <td>@item.Apellido</td>
+                        <td>@item.Nombre</td>
+                        <td>@item.Domicilio</td>
+                        <td>@item.Telefono</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+</div>
