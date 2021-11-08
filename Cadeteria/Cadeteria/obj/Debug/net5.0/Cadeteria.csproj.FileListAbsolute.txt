@@ -67,3 +67,4 @@ C:\Users\Usuario\OneDrive\Escritorio\practicaC#\tp032021-DiazCode12\Cadeteria\Ca
 C:\Users\Usuario\OneDrive\Escritorio\practicaC#\tp032021-DiazCode12\Cadeteria\Cadeteria\obj\Debug\net5.0\Cadeteria.pdb
 C:\Users\Usuario\OneDrive\Escritorio\practicaC#\tp032021-DiazCode12\Cadeteria\Cadeteria\obj\Debug\net5.0\Cadeteria.genruntimeconfig.cache
 C:\Users\Usuario\OneDrive\Escritorio\practicaC#\tp032021-DiazCode12\Cadeteria\Cadeteria\obj\Debug\net5.0\Razor\Views\Cadete\AddCadete.cshtml.g.cs
+C:\Users\Usuario\OneDrive\Escritorio\practicaC#\tp032021-DiazCode12\Cadeteria\Cadeteria\obj\Debug\net5.0\Razor\Views\Cadete\EditarCadete.cshtml.g.cs

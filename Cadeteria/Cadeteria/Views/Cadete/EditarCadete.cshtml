@@ -1,0 +1,33 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model Cadeteria.Models.Cadete
+@{
+    ViewData["Title"] = "AddCadete";
+    Cadete cadete = TempData["CadeteTemporal"] as Cadete;
+}
+
+<form asp-action="GuardarCadeteEditado" asp-controller="Cadete" method="post">
+    
+    <input type="hidden" asp-for="Id" value="@cadete.Id" />
+    <fieldset>
+        <legend>Edicion de Cadetes</legend>
+        <div>
+            <label for="lastname">Apellido:<input type="text" id="lastname" asp-for="Apellido" value="@cadete.Apellido" /></label>
+            <span asp-validation-for="Apellido" class="text-danger"></span>
+        </div>
+        <div>
+            <label for="name">Nombre:<input type="text" id="name" asp-for="Nombre" value="@cadete.Nombre" /></label>
+            <span asp-validation-for="Nombre" class="text-danger"></span>
+        </div>
+        <div>
+            <label for="dire">Domicilio:<input type="text" id="dire" asp-for="Domicilio" value="@cadete.Domicilio" /></label>
+            <span asp-validation-for="Domicilio" class="text-danger"></span>
+        </div>
+        <div>
+            <label for="tel">Telefono:<input type="text" id="tel" asp-for="Telefono" value="@cadete.Telefono" /></label>
+            <span asp-validation-for="Telefono" class="text-danger"></span>
+        </div>
+    </fieldset>
+    <button type="submit">Enviar</button>
+</form>

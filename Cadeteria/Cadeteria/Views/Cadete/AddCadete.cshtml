@@ -58,6 +58,12 @@
                         <td>@item.Nombre</td>
                         <td>@item.Domicilio</td>
                         <td>@item.Telefono</td>
+                        <td>
+                            <form asp-action="EditarCadete" asp-controller="Cadete" method="post">
+                                <input type="hidden" asp-for="Id" value="@item.Id"/>
+                                <button type="submit" class="btn btn-success">Editar</button>
+                            </form>
+                        </td>
                     </tr>
                 }
             </tbody>

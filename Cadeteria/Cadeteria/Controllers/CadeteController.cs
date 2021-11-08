@@ -17,12 +17,12 @@ namespace Cadeteria.Controllers
                 cad = db.cadetes.Where(a => a.Apellido.ToLower().Contains(apellido.ToLower())).ToList();
             }
             TempData["cadetes"] = cad;
-            return View ("AddCadete");
+            return View("AddCadete");
         }
         public IActionResult AddCadete()
         {
             List<Cadete> cad = new List<Cadete>();
-            using(var db = new DemoContext())
+            using (var db = new DemoContext())
             {
                 cad = db.cadetes.ToList();
             }
@@ -40,10 +40,35 @@ namespace Cadeteria.Controllers
                     db.SaveChanges();
                 }
             }
-            
+
             return View();
         }
-
+        [HttpPost]
+        public IActionResult EditarCadete(Cadete cadete)
+        {
+            using(var db = new DemoContext())
+            {
+                var CadeteTemporal = db.cadetes.Where(u => u.Id == cadete.Id).FirstOrDefault();
+                TempData["CadeteTemporal"] = CadeteTemporal;
+            }
+            return View();
+        }
         
+        public IActionResult GuardarCadeteEditado(Cadete cadete)
+        {
+            using (var db = new DemoContext())
+            {
+                var subirCadete = db.cadetes.Where(u => u.Id == cadete.Id).FirstOrDefault();
+
+                subirCadete.Apellido = cadete.Apellido;
+                subirCadete.Nombre = cadete.Nombre;
+                subirCadete.Domicilio = cadete.Domicilio;
+                subirCadete.Telefono = cadete.Telefono;
+
+                db.SaveChanges();
+
+            }
+            return View("AddCadete");
+        }
     }
 }
