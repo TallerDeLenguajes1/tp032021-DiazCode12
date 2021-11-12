@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Cadeteria2.Models;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,8 +9,13 @@ namespace Cadeteria2.Controllers
 {
     public class CadeteController : Controller
     {
-        public IActionResult Index()
+        public IActionResult Cadete()
         {
+            return View();
+        }
+        public IActionResult AddCadete()
+        {
+            Cadete cadete = new Cadete();
             return View();
         }
     }

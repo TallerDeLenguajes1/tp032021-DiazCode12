@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cadeteria", "Cadeteria\Cade
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cadeteria2", "Cadeteria2\Cadeteria2.csproj", "{50B779AF-7938-46D9-9077-A41FC2F0D46B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServicioCadeteria", "ServicioCadeteria\ServicioCadeteria.csproj", "{27EF0BC7-912F-4994-923F-9CD6C890CAEF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{50B779AF-7938-46D9-9077-A41FC2F0D46B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{50B779AF-7938-46D9-9077-A41FC2F0D46B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{50B779AF-7938-46D9-9077-A41FC2F0D46B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27EF0BC7-912F-4994-923F-9CD6C890CAEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27EF0BC7-912F-4994-923F-9CD6C890CAEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27EF0BC7-912F-4994-923F-9CD6C890CAEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27EF0BC7-912F-4994-923F-9CD6C890CAEF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

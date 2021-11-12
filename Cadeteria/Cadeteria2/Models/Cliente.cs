@@ -7,7 +7,7 @@ namespace Cadeteria2.Models
 {
     public class Cliente : persona
     {
-        public Cliente(int id, string nombre,string direccion, string telefono):base(id, nombre, direccion, telefono)
+        public Cliente( string nombre,string direccion, string telefono):base( nombre, direccion, telefono)
         {
 
         }

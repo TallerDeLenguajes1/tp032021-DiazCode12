@@ -1,0 +1,80 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    List<ClaseCadete> cadetes = TempData["ClaseCadetes"] as List<ClaseCadete>;
+}
+
+@model ServicioCadeteria.Models.ClaseCadete
+<div>
+    <form asp-action="AddCadete" asp-controller="Cadete" method="post">
+        <fieldset>
+            <legend>Cadetes</legend>
+            <div>
+                <label for="lastname">Apellido:<input type="text" id="lastname" asp-for="apellido" /></label>
+                <span asp-validation-for="apellido" class="text-danger"></span>
+            </div>
+            <div>
+                <label for="name">Nombre:<input type="text" id="name" asp-for="nombre" /></label>
+                <span asp-validation-for="nombre" class="text-danger"></span>
+            </div>
+            <div>
+                <label for="dire">Domicilio:<input type="text" id="dire" asp-for="direccion" /></label>
+                <span asp-validation-for="direccion" class="text-danger"></span>
+            </div>
+            <div>
+                <label for="tel">Telefono:<input type="text" id="tel" asp-for="telefono" /></label>
+                <span asp-validation-for="telefono" class="text-danger"></span>
+            </div>
+        </fieldset>
+        <button type="submit">Enviar</button>
+    </form>
+</div>
+
+<div>
+    <h2>Listado de Cadetes</h2>
+    @if (cadetes != null && cadetes.Count > 0)
+    {
+        <form asp-action="buscarCadete" asp-controller="Cadete" method="post">
+            <label>Buscar: <input type="text" name="apellido" /></label>
+            <button type="submit">Buscar</button>
+        </form>
+
+
+        <table class="table table-striped table-dark">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Apellido</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Domicilio</th>
+                    <th scope="col">Telefono</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in cadetes)
+                {
+                <tr>
+                    <th>@item.id</th>
+                    <td>@item.apellido</td>
+                    <td>@item.nombre</td>
+                    <td>@item.direccion</td>
+                    <td>@item.telefono</td>
+                    <td>
+                        <form asp-action="EditarCadete" asp-controller="Cadete" method="post">
+                            <input type="hidden" asp-for="id" value="@item.id" />
+                            <button type="submit" class="btn btn-success">Editar</button>
+                        </form>
+                    </td>
+                    <td>
+                        <form asp-action="EliminarCadete" asp-controller="Cadete" method="post">
+                            <input type="hidden" asp-for="id" value="@item.id" />
+                            <button type="submit" class="btn btn-success">Eliminar</button>
+                        </form>
+                    </td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    }
+</div>
