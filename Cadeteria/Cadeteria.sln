@@ -5,9 +5,11 @@ VisualStudioVersion = 16.0.31727.386
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cadeteria", "Cadeteria\Cadeteria.csproj", "{B9DFE8A4-23BE-457D-A61E-83A9EA2D8B2F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cadeteria2", "Cadeteria2\Cadeteria2.csproj", "{50B779AF-7938-46D9-9077-A41FC2F0D46B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cadeteria2", "Cadeteria2\Cadeteria2.csproj", "{50B779AF-7938-46D9-9077-A41FC2F0D46B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServicioCadeteria", "ServicioCadeteria\ServicioCadeteria.csproj", "{27EF0BC7-912F-4994-923F-9CD6C890CAEF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServicioCadeteria", "ServicioCadeteria\ServicioCadeteria.csproj", "{27EF0BC7-912F-4994-923F-9CD6C890CAEF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication", "WebApplication\WebApplication.csproj", "{6B034D0B-5E2A-49F4-B2A7-3A9D45E7B382}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{27EF0BC7-912F-4994-923F-9CD6C890CAEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{27EF0BC7-912F-4994-923F-9CD6C890CAEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{27EF0BC7-912F-4994-923F-9CD6C890CAEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B034D0B-5E2A-49F4-B2A7-3A9D45E7B382}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B034D0B-5E2A-49F4-B2A7-3A9D45E7B382}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B034D0B-5E2A-49F4-B2A7-3A9D45E7B382}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B034D0B-5E2A-49F4-B2A7-3A9D45E7B382}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

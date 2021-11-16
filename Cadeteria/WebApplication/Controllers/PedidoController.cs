@@ -4,11 +4,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ServicioCadeteria.Controllers
+namespace WebApplication.Controllers
 {
-    public class UsuarioController : Controller
+    public class PedidoController : Controller
     {
-        public IActionResult Index()
+        public IActionResult PedidoIndex()
         {
             return View();
         }
