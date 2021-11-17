@@ -9,7 +9,7 @@ using WebApplication.Models.Entity;
 
 namespace WebApplication.Models.DataBase
 {
-    public class RepoCliente
+    public class RepoCliente : IRepoCliente
     {
         private Logger logger;
         private string pathCadetes = @"C:\Users\Usuario\OneDrive\Escritorio\practicaC#\tp032021-DiazCode12\Cadeteria\WebApplication\SQLite\DBWebAplication.db";

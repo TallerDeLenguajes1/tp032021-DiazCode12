@@ -12,8 +12,8 @@ namespace WebApplication.Controllers
     public class CadeteController : Controller
     {
         private readonly ILogger<CadeteController> _logger;
-        private readonly RepoCadete _repoCadete;
-        public CadeteController(ILogger<CadeteController> logger, RepoCadete repoCadete)
+        private readonly IRepoCadete _repoCadete;
+        public CadeteController(ILogger<CadeteController> logger, IRepoCadete repoCadete)
         {
             _logger = logger;
             _repoCadete = repoCadete;

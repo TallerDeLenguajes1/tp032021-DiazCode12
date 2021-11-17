@@ -10,9 +10,9 @@ using WebApplication.Models.Entity;
 
 namespace WebApplication.Models.DataBase
 {
-    public class RepoPedido
+    public class RepoPedido : IRepoPedido
     {
-       // private readonly ILogger _logger;
+        // private readonly ILogger _logger;
         //deberia cambiar el nombre de esta variable y hacer una inyeccion de esta direccion para usarla en todas las clases?
         private string pathCadetes = @"C:\Users\Usuario\OneDrive\Escritorio\practicaC#\tp032021-DiazCode12\Cadeteria\WebApplication\SQLite\DBWebAplication.db";
         private NLog.Logger logger;
@@ -62,7 +62,7 @@ namespace WebApplication.Models.DataBase
         public ClaseCadete AsignarCadete()
         {
             ClaseCadete cadete = new ClaseCadete();
-            
+
             return cadete;
 
         }

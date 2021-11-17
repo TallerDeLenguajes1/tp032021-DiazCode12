@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace WebApplication.Models.DataBase
 {
-    public class RepoCadete
+    public class RepoCadete : IRepoCadete
     {
         private readonly ILogger _logger;
         private string pathCadetes = @"C:\Users\Usuario\OneDrive\Escritorio\practicaC#\tp032021-DiazCode12\Cadeteria\WebApplication\SQLite\DBWebAplication.db";
@@ -40,7 +40,7 @@ namespace WebApplication.Models.DataBase
                             cadeteBuscado.Apellido = dataReader["cadeteApellido"].ToString();
                             cadeteBuscado.Direccion = dataReader["cadeteDireccion"].ToString();
                             cadeteBuscado.Telefono = dataReader["cadeteTelefono"].ToString();
-                            
+
                         }
                         connection.Close();
                     }
@@ -155,7 +155,7 @@ namespace WebApplication.Models.DataBase
         {
             try
             {
-                string cadena = "Data Source = " + Path.Combine(Directory.GetCurrentDirectory(),pathCadetes);
+                string cadena = "Data Source = " + Path.Combine(Directory.GetCurrentDirectory(), pathCadetes);
                 using (SQLiteConnection conexion = new SQLiteConnection(cadena))
                 {
                     string instruccion = @"DELETE FROM cadetes WHERE cadeteID = @Id";
