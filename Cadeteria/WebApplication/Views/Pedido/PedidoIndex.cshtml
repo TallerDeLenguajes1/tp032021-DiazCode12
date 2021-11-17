@@ -3,7 +3,7 @@
 *@
 @{
 }
-
+@model List<WebApplication.Models.ClaseCadete>
 
 <div>
     <form asp-action="SavePedido" asp-controller="Pedido" method="post">
@@ -28,6 +28,15 @@
                 <label for="obs">Pedido:</label>
             </div>
             <textarea name="obs" id="obs"></textarea>
+        </fieldset>
+        <fieldset>
+            <legend>Elegir Cadete</legend>
+            <select name="cadeteID">
+                @foreach (var cadete in Model)
+                {
+                    <option value="@cadete.Id">@cadete.Apellido @cadete.Nombre</option>
+                }
+            </select>
         </fieldset>
         <button type="submit">Realizar Pedido</button>
     </form>

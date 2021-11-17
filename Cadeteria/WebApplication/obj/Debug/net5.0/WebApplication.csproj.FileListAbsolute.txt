@@ -367,3 +367,5 @@ C:\Users\Usuario\OneDrive\Escritorio\practicaC#\tp032021-DiazCode12\Cadeteria\We
 C:\Users\Usuario\OneDrive\Escritorio\practicaC#\tp032021-DiazCode12\Cadeteria\WebApplication\obj\Debug\net5.0\WebApplication.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Usuario\OneDrive\Escritorio\practicaC#\tp032021-DiazCode12\Cadeteria\WebApplication\obj\Debug\net5.0\Razor\Views\Cadete\CadeteIndex.cshtml.g.cs
 C:\Users\Usuario\OneDrive\Escritorio\practicaC#\tp032021-DiazCode12\Cadeteria\WebApplication\obj\Debug\net5.0\Razor\Views\Cadete\UpdateCadeteForm.cshtml.g.cs
+C:\Users\Usuario\OneDrive\Escritorio\practicaC#\tp032021-DiazCode12\Cadeteria\WebApplication\obj\Debug\net5.0\Razor\Views\Cliente\ClienteIndex.cshtml.g.cs
+C:\Users\Usuario\OneDrive\Escritorio\practicaC#\tp032021-DiazCode12\Cadeteria\WebApplication\obj\Debug\net5.0\Razor\Views\Pedido\PedidoIndex.cshtml.g.cs

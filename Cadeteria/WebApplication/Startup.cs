@@ -28,6 +28,8 @@ namespace WebApplication
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
             
             services.AddSingleton<RepoCadete>(new RepoCadete(NLogBuilder.ConfigureNLog("nlog.config").GetCurrentClassLogger()));
+            services.AddSingleton<RepoPedido>(new RepoPedido(NLogBuilder.ConfigureNLog("nlog.config").GetCurrentClassLogger()));
+            services.AddSingleton<RepoCliente>(new RepoCliente(NLogBuilder.ConfigureNLog("nlog.config").GetCurrentClassLogger()));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
