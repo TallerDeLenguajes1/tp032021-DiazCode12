@@ -12,10 +12,10 @@ namespace WebApplication.Controllers
     public class PedidoController : Controller
     {
         private readonly ILogger<PedidoController> _logger;
-        private readonly RepoPedido _repoPedido;
-        private readonly RepoCadete _repoCadete;
-        private readonly RepoCliente _repoCliente;
-        public PedidoController(ILogger<PedidoController> logger, RepoPedido repoPedido,RepoCadete repoCadete, RepoCliente repoCliente)
+        private readonly IRepoPedido _repoPedido;
+        private readonly IRepoCadete _repoCadete;
+        private readonly IRepoCliente _repoCliente;
+        public PedidoController(ILogger<PedidoController> logger, IRepoPedido repoPedido,IRepoCadete repoCadete, IRepoCliente repoCliente)
         {
             _logger = logger;
             _repoPedido = repoPedido;

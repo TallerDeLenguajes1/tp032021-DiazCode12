@@ -9,5 +9,6 @@ namespace WebApplication.Models.DataBase
         List<ClaseCadete> GetCadetes();
         void SaveCadete(ClaseCadete cadete);
         void UpdateCadetes(ClaseCadete cadete);
+        ClaseCadete ObtenerCadete(string nombre, string apellido);
     }
 }

@@ -12,3 +12,7 @@
 2021-11-17 16:07:35.4336|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
 2021-11-17 16:07:35.4578|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
 2021-11-17 16:07:35.4638|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Usuario\OneDrive\Escritorio\practicaC#\tp032021-DiazCode12\Cadeteria\WebApplication 
+2021-11-17 16:15:28.2871|0|DEBUG|WebApplication.Program|init main 
+2021-11-17 16:15:30.0624|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-11-17 16:15:30.0624|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-11-17 16:15:30.0772|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\Usuario\OneDrive\Escritorio\practicaC#\tp032021-DiazCode12\Cadeteria\WebApplication 

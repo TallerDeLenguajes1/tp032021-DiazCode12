@@ -175,5 +175,43 @@ namespace WebApplication.Models.DataBase
                 throw;
             }
         }
+    
+        public ClaseCadete ObtenerCadete(string nombre, string apellido)
+        {
+            ClaseCadete cadeteBuscado = new ClaseCadete();
+
+            try
+            {
+                string cadena = "Data Source = " + Path.Combine(Directory.GetCurrentDirectory(), pathCadetes);
+                using (SQLiteConnection connection = new SQLiteConnection(cadena))
+                {
+                    string sqlQuery = "SELECT * FROM cadetes WHERE cadeteNombre = @cadeteNombre AND cadeteApellido = @cadeteApellido ";
+
+                    using (SQLiteCommand command = new SQLiteCommand(sqlQuery, connection))
+                    {
+                        command.Parameters.AddWithValue("@cadeteNombre", nombre);
+                        command.Parameters.AddWithValue("@cadeteApellido", apellido);
+                        connection.Open();
+
+                        using (SQLiteDataReader dataReader = command.ExecuteReader())
+                        {
+                            dataReader.Read();
+                            cadeteBuscado.Id = Convert.ToInt32(dataReader["cadeteID"]);
+                            cadeteBuscado.Nombre = dataReader["cadeteNombre"].ToString();
+                            cadeteBuscado.Apellido = dataReader["cadeteApellido"].ToString();
+                            cadeteBuscado.Direccion = dataReader["cadeteDireccion"].ToString();
+                            cadeteBuscado.Telefono = dataReader["cadeteTelefono"].ToString();
+
+                        }
+                        connection.Close();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+            return cadeteBuscado;
+        }
     }
 }
